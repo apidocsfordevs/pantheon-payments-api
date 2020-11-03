@@ -1,0 +1,27 @@
+openapi: 3.0.3
+info:
+  title: Payments
+  description: This API powers payments processing with Pantheon via supported messaging apps.
+  version: 1
+servers:
+  - url: 'http://pantheon.api/payments'
+paths:
+  /requestPayment:
+    post:
+      description: Create and send a payment request to a user via a supported messaging app.
+      parameters:
+        - in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {}
+      tags:
+        - Manage Payment Requests
+  /startAvailablePayment:
+    put:
+      description: ''
+      responses: {}
+      tags:
+        - Make Payments
